@@ -1,0 +1,466 @@
+/* Base styles */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero {
+    /* padding: 4rem 0; */
+    padding: 0 0 4rem 0;
+}
+
+.header {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 1rem 15px;
+}
+.header .logo {
+    color: var(--primary-color);
+    font-size: 26px;
+    font-weight: bold;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.header .main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* responsive */
+@media (max-width: 767px) {
+    .header .logo {
+      width: 100%;
+      height: 50px;
+    }
+  }
+  .header .main-nav {
+    display: flex;
+  }
+  @media (max-width: 767px) {
+    .header .main-nav {
+      margin: auto;
+    }
+  }
+  .header .main-nav > li > a {
+    height: 72px;
+    position: relative;
+    color: black;
+    padding: 0 30px;
+    overflow: hidden;
+    font-size: 18px;
+    transition: var(--main-transition);
+    text-decoration: none;
+  }
+  /* responsive */
+  @media (max-width: 767px) {
+    .header .main-nav > li > a {
+      padding: 10px;
+      font-size: 14px;
+      height: 40px;
+    }
+  }
+
+  .header .main-nav > li > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    top: 0;
+    left: 0%;
+    transition: 1s;
+  }
+  .header .main-nav > li > a:hover {
+    color: var(--primary-color);
+    background-color: #fafafa;
+  }
+  .header .main-nav > li > a:hover::before {
+    background-color: var(--primary-color);
+  }
+
+
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .profile {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 50px;
+    }
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.profile-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-content h2 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.profile-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a i {
+    color: var(--text-secondary);
+    font-size: 1.5em;
+}
+
+.social-links a i:hover {
+    color: var(--primary-color);
+}
+
+.social-icon {
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+}
+
+.download-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.download-cv:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 0;
+}
+
+.projects-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+    .projects-header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+}
+
+.projects-header h2 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9em;
+    border: none;
+    background-color: #e5e7eb;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: #d1d5db;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    overflow: hidden;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-card:hover {
+    transform: scale(1.04);
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.dataset-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.dataset-link:hover {
+    text-decoration: underline;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-type {
+    background-color: #e0e7ff;
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.github-link:hover {
+    color: var(--primary-color);
+}
+
+/* contact */
+.contact {
+    background-color: var(--bg-color);
+    padding: 70px 30px;
+}
+
+.contact .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content .info h3 {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+}
+
+.content .info p {
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.title {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.contact-card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 20px 0 rgba(1 1 1 / 50%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: all 0.7s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.1);
+}
+
+.contact-card .icon {
+    font-size: 4.5em;
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-card .info p  {
+    font-size: 1.2em;
+}
+
+/*----------------------------------------*/
+
+footer {
+    background-color: #000016;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    color: white;
+}
+
+footer p span,
+footer p {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+footer p span {
+    color: #3a6cf4;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: 0.9 ease;
+}
+
+footer .social-icons a:hover {
+    font-size: 2em;
+    color: #0038d3;
+}
+
+/* responsive */
+@media (max-width: 431px) {
+    .profile {
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+    .profile-image img {
+        height: 330px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+    
+    .projects {
+        padding: 2.5rem 0;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .contact {
+        padding: 40px 15px 70px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    footer .social-icons a {
+        padding: 5px;
+        font-size: 1.1em;
+    }
+
+
+}
