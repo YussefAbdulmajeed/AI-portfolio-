@@ -26,14 +26,14 @@ const projects = [
     },
     {
         id: 3,
-        name: 'Neural Style Transfer',
-        description: 'Developed a neural style transfer application using deep learning techniques.',
+        name: 'Weather Classification',
+        description: 'Weather Classification project using ResNets model from scratch and pre-trained model is DenseNet and Xception model',
         dataset: {
-            name: 'WikiArt Dataset',
-            url: 'https://www.kaggle.com/c/painter-by-numbers'
+            name: '5-class weather status image classification',
+            url: 'https://www.kaggle.com/datasets/ammaralfaifi/5class-weather-status-image-classification'
         },
         type: 'Deep Learning',
-        githubUrl: 'https://github.com/yourusername/style-transfer'
+        githubUrl: 'https://github.com/YussefAbdulmajeed/Deep-learning-project.git'
     },
     {
         id: 4,
