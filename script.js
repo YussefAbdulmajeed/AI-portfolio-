@@ -45,6 +45,39 @@ const projects = [
         },
         type: 'Machine Learning',
         githubUrl: 'https://github.com/yourusername/style-transfer'
+    },
+    {
+        id: 5,
+        name: 'Customer Review Sentiment Analysis',
+        description: 'Opinion Mining project using distilbert-base-uncased model for sentiment analysis on customer reviews.',
+        dataset: {
+            name: 'AspectBasedSentimentAnalysis',
+            url: 'https://www.kaggle.com/datasets/charitarth/semeval-2014-task-4-aspectbasedsentimentanalysis'
+        },
+        type: 'NLP',
+        githubUrl: 'https://github.com/YussefAbdulmajeed/NLU-project.git'
+    },
+    {
+        id: 6,
+        name: 'Flower Segmentation',
+        description: 'Developed a flower segmentation application using deep learning techniques.',
+        dataset: {
+            name: 'Flower Type Detection',
+            url: 'https://universe.roboflow.com/osmanbugrabolat/flower-type-detection-r6wu5/dataset/1'
+        },
+        type: 'Deep Learning',
+        githubUrl: 'https://github.com/YussefAbdulmajeed/Floweres-Segmentation.git'
+    },
+    {
+        id: 7,
+        name: 'Customer Clustering CI',
+        description: 'Developed a customer clustering application using the most common clustering techniques.',
+        dataset: {
+            name: 'Market Segmentation in Insurance Unsupervised',
+            url: 'https://www.kaggle.com/datasets/jillanisofttech/market-segmentation-in-insurance-unsupervised'
+        },
+        type: 'Machine Learning',
+        githubUrl: 'https://github.com/YussefAbdulmajeed/Cusromer-clastering-CI.git'
     }
 ];
 
